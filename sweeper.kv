@@ -1,0 +1,39 @@
+
+
+<Container>:
+	orientation: 'vertical'
+
+	flag: flag
+	button_play: button_play
+	mines: Mines
+	time: 0
+	arr: []
+	arr_mine: []
+	k_mine: 0
+	open: False
+	gl: gl
+	BoxLayout:
+		size_hint: (1, 0.15)
+
+		Label:
+			id: Mines
+			font_size: '25sp'
+			text: 'Mines:'
+
+		Button:
+			id: button_play
+			font_size: '25sp'
+			text: 'Play'
+
+			on_press: root.play()
+
+
+		Button:
+			id:flag
+			font_size: '25sp'
+			text: 'Flag: OFF'
+			on_press: root.getFlag()
+
+	GridLayout:
+		id: gl
+		rows: 6
